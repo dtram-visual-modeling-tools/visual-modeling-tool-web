@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as MenubarPrimitive from "@radix-ui/react-menubar";
-import { Check, ChevronRight, Circle } from "lucide-react";
+import { Check, ChevronRight, Circle, Share2 } from "lucide-react";
 import { cn } from "../lib/utils";
 
 const Menubar = React.forwardRef<
@@ -210,7 +210,7 @@ MenubarShortcut.displayName = "MenubarShortcut";
 
 export function AppMenubar() {
     return (
-        <Menubar className="rounded-none border-b border-none px-2 lg:px-4">
+        <Menubar className="w-full rounded-none border-b border-none px-2 lg:px-4">
             <div className="font-bold text-lg mr-4">DTRAM</div>
             <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>
@@ -290,6 +290,11 @@ export function AppMenubar() {
                     <MenubarItem>About</MenubarItem>
                 </MenubarContent>
             </MenubarMenu>
+            <div className="flex-1" />
+            <button className="flex items-center gap-2 px-3 py-1.5 text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 rounded-md transition-colors">
+                <Share2 className="h-4 w-4" />
+                Share
+            </button>
         </Menubar>
     );
 }

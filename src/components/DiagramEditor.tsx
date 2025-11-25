@@ -1,6 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
 import ReactFlow, {
-
     Controls,
     Background,
     useNodesState,
@@ -93,7 +92,7 @@ function DiagramEditorContent({ onNodeClick }: DiagramEditorProps) {
                 fitView
                 className="bg-background"
             >
-                <Controls className="bg-white text-black border-gray-200" />
+                <Controls className="!bg-card !border-muted [&>button]:!bg-card [&>button]:!border-muted [&>button]:!fill-foreground [&>button]:!text-foreground [&>button:hover]:!bg-accent" />
                 <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
             </ReactFlow>
         </div>
