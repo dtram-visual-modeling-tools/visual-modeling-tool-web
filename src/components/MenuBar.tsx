@@ -3,7 +3,20 @@ import * as MenubarPrimitive from "@radix-ui/react-menubar";
 import { Check, ChevronRight, Circle } from "lucide-react";
 import { cn } from "../lib/utils";
 
-const Menubar = MenubarPrimitive.Root;
+const Menubar = React.forwardRef<
+    React.ElementRef<typeof MenubarPrimitive.Root>,
+    React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
+>(({ className, ...props }, ref) => (
+    <MenubarPrimitive.Root
+        ref={ref}
+        className={cn(
+            "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
+            className
+        )}
+        {...props}
+    />
+));
+Menubar.displayName = MenubarPrimitive.Root.displayName;
 
 const MenubarMenu = MenubarPrimitive.Menu;
 
@@ -198,6 +211,7 @@ MenubarShortcut.displayName = "MenubarShortcut";
 export function AppMenubar() {
     return (
         <Menubar className="rounded-none border-b border-none px-2 lg:px-4">
+            <div className="font-bold text-lg mr-4">DTRAM</div>
             <MenubarMenu>
                 <MenubarTrigger>File</MenubarTrigger>
                 <MenubarContent>

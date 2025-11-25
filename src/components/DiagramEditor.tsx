@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 import ReactFlow, {
-    MiniMap,
+
     Controls,
     Background,
     useNodesState,
@@ -94,7 +94,6 @@ function DiagramEditorContent({ onNodeClick }: DiagramEditorProps) {
                 className="bg-background"
             >
                 <Controls className="bg-white text-black border-gray-200" />
-                <MiniMap className="bg-white border-gray-200" />
                 <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
             </ReactFlow>
         </div>
