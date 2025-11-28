@@ -1,5 +1,5 @@
 import { Box, Layers, ArrowLeftRight, Workflow } from "lucide-react";
-import { cn } from "../lib/utils";
+import { cn } from "../../lib/utils";
 
 interface SidebarProps extends React.HTMLAttributes<HTMLDivElement> { }
 

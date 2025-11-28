@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Layout } from "./components/Layout";
-import { DiagramEditor } from "./components/DiagramEditor";
-import { CodeEditor } from "./components/CodeEditor";
+import { Layout } from "./components/layout/Layout";
+import { DiagramEditor } from "./components/features/DiagramEditor";
+import { CodeEditor } from "./components/features/CodeEditor";
 
 function App() {
   const [code, setCode] = useState<string>("// Select a node to view its code");

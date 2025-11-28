@@ -26,6 +26,7 @@ export function CodeEditor({ code, onChange }: CodeEditorProps) {
                     scrollBeyondLastLine: false,
                     automaticLayout: true,
                     padding: { top: 16, bottom: 16 },
+                    fontFamily: 'Geist Mono, monospace',
                 }}
             />
         </div>

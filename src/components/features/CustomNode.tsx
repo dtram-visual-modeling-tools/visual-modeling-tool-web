@@ -1,5 +1,5 @@
 import { Handle, Position } from 'reactflow';
-import { cn } from '../lib/utils';
+import { cn } from '../../lib/utils';
 import { Box } from 'lucide-react';
 
 interface CustomNodeProps {
